@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-o9*(-#-%wm*bv1)wfd=lt=tsebtcq##b_&d@nbi63-td01xvgv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 #ASGI_APPLICATION = "where_water.asgi.application"
 #ASGI_APPLICATION = "routing.application"
 ASGI_APPLICATION = 'where_water.asgi.application'
@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "myapp"
+    "myapp",
+    "where_water_app"
 ]
 
 MIDDLEWARE = [

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,11 +27,16 @@ SECRET_KEY = 'django-insecure-o9*(-#-%wm*bv1)wfd=lt=tsebtcq##b_&d@nbi63-td01xvgv
 DEBUG = True
 
 ALLOWED_HOSTS = []
+#ASGI_APPLICATION = "where_water.asgi.application"
+#ASGI_APPLICATION = "routing.application"
+ASGI_APPLICATION = 'where_water.asgi.application'
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "channels",
+    "daphne",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -69,7 +75,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'where_water.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases

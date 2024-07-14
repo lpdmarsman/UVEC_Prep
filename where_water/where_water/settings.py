@@ -31,6 +31,15 @@ ALLOWED_HOSTS = []
 #ASGI_APPLICATION = "routing.application"
 ASGI_APPLICATION = 'where_water.asgi.application'
 
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
+}
+
 
 # Application definition
 
